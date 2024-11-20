@@ -76,15 +76,96 @@ CREATE TABLE Table_Name(column_name data_type(size)FOREIGNKEY(column_name)REFERE
 Syntax:
 CREATE TABLE Table_Name(col_name1,col_name2,col_name3 DEFAULT ‘’);
 
-Question 1:
-Write a SQL Query for Creating a table name as "Employee" with the following attributes 
+### Question 1:
+
+Write a SQL Query for Creating a table name as "Employee" with the following attributes
+
 eid as primarykey with autoincrement
+
 name as varchar(50)
+
 designation as varchar(30)
 
 Answer:
 CREATE TABLE Employee(
+
 eid INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(50), designation VARCHAR(30)
+
 );
 
 Output:
+
+![image](https://github.com/user-attachments/assets/f3bffbec-a545-4ca0-8b3e-2196b321e6d9)
+
+
+### Question 2:
+
+Consider a situation already created a table "customer" from that create a new table"customerbackup" with all the attributes available in the table "customer" 
+
+Create a table name as "customerbackup" with all the attributes available in the table" customer"
+
+Answer:
+
+CREATE TABLE customerbackup AS
+
+SELECT * FROM customer;
+
+Output:
+
+![image](https://github.com/user-attachments/assets/ca3ca458-92ff-4b8f-a4b0-ad6ccd8c72e9)
+
+
+
+### Question 3:
+
+Write a SQL Query for creating a table "Students" which already exists so use proper keyword inorder to avoid error message
+
+Create a table name as "Students" with the following attributes ,use default keyword in the attribute year as 2
+
+id as number
+
+grade as varchar(50)
+
+year as integer
+
+Answer:
+
+CREATE TABLE IF NOT EXISTS Students(
+
+id number, grade varchar(50), year integer
+
+);
+
+
+Output:
+
+![image](https://github.com/user-attachments/assets/9e0426b9-0f73-4586-8f2a-3cdc259953a4)
+
+### Question 4:
+
+Create a table name as "Employee" with the following attributes
+
+eid as primarykey with autoincrement
+
+name as varchar(50)
+
+designation as varchar(30)
+
+dob as date
+
+doj as date
+
+Answer:
+
+CREATE TABLE Employee(
+
+eid INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(50), designation VARCHAR(50), dob DATE, doj DATE, );
+
+Output:
+
+![image](https://github.com/user-attachments/assets/3efbb430-77b4-4632-9b87-18c8ad445205)
+
+
+
+
+
